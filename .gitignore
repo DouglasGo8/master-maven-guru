@@ -52,7 +52,8 @@ local.properties
 ######################
 # Intellij
 ######################
-.idea/
+.idea
+.idea/**
 *.iml
 *.iws
 *.ipr
@@ -63,6 +64,8 @@ local.properties
 # Visual Studio Code
 ######################
 .vscode/
+.settings
+.project
 
 ######################
 # Maven
