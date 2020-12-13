@@ -58,7 +58,8 @@
         </plugins>
     </build>
     <modules>
-        <module>hello-world-cmd</module>
+        <module>mb2g-hello</module>
         <module>mb2g-jaxb</module>
+        <module>mb2g-testing</module>
     </modules>
 </project>
