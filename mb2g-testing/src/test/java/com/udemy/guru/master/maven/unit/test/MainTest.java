@@ -1,13 +1,16 @@
 package com.udemy.guru.master.maven.unit.test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import org.junit.jupiter.api.Test;
+
+
+import org.testng.annotations.Test;
+
+import static org.testng.Assert.assertEquals;
 
 public class MainTest {
 
 
     @Test
-    public void testSum() {
+    public void testAssertEquals() {
 
         var guru = new GuruPragmatic();
         var result = guru.sayHello("Douglas");
@@ -15,6 +18,8 @@ public class MainTest {
         assertEquals(result, "Hi Douglas");
 
     }
+
+
 
 
 }

@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project
-        xmlns="http://maven.apache.org/POM/4.0.0"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.udemy.guru.master.maven</groupId>
     <artifactId>master-maven-guru</artifactId>
@@ -17,7 +15,6 @@
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.plugin.version>3.8.0</maven.compiler.plugin.version>
-        <maven.surefire.plugin.version>2.22.1</maven.surefire.plugin.version>
     </properties>
     <dependencies>
         <dependency>
@@ -37,6 +34,11 @@
             <version>${junit.jupiter.version}</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.2.3</version>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
@@ -50,10 +52,6 @@
                     <showWarnings>true</showWarnings>
                     <showDeprecation>true</showDeprecation>
                 </configuration>
-            </plugin>
-            <plugin>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>${maven.surefire.plugin.version}</version>
             </plugin>
         </plugins>
     </build>
