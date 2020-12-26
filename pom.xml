@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project
+        xmlns="http://maven.apache.org/POM/4.0.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.udemy.guru.master.maven</groupId>
     <artifactId>master-maven-guru</artifactId>
@@ -8,6 +10,7 @@
     <packaging>pom</packaging>
     <name>Udemy :: Apache Maven :: Beginner to Guru</name>
     <properties>
+        <skipTests>true</skipTests>
         <java.version>11</java.version>
         <junit.jupiter.version>5.4.2</junit.jupiter.version>
         <maven.jar.plugin.version>3.1.1</maven.jar.plugin.version>
@@ -44,6 +47,20 @@
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-clean-plugin</artifactId>
+                <version>3.1.0</version>
+                <executions>
+                    <execution>
+                        <id>auto-clean</id>
+                        <phase>initialize</phase>
+                        <goals>
+                            <goal>clean</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>${maven.compiler.plugin.version}</version>
                 <configuration>
@@ -59,5 +76,7 @@
         <module>mb2g-hello</module>
         <module>mb2g-jaxb</module>
         <module>mb2g-testing</module>
+        <module>mb2g-web-api</module>
+        <module>mb2g-jpa-entities</module>
     </modules>
 </project>
