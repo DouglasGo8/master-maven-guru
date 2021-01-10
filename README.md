@@ -61,6 +61,7 @@ $ mvn dependency:go-offline
 $ mvn dependency:purge-local-repository
 $ mvn dependency:sources-get
 $ mvn help:active-profiles
+$ mvn clean deploy -Ppackagecloud
 ```
 
 * Maven standard dir
