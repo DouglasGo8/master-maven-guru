@@ -1,15 +1,18 @@
 # ;Apache Maven :: Beginner to Guru
-(Ref)[http://maven.apache.org/ref/3.6.3/]
+
+(Ref) [http://maven.apache.org/ref/3.6.3/]
+
 ---
 
 ## Command Line Java
 
-
+```s
 $ javac {{FILE}}.java
 $ jar cf {{FILE}}.jar {{FILE}.class
 $ java -classpath *.jar {{ClassName}}
 $ javac -classpath ./lib/* {{FILE.java}} lib here have a 3rd lib
 $ java -classpath ./lib/*:./ {{ClassName}}
+```
 
 ## Maven Command Line
 
@@ -17,7 +20,6 @@ $ mvn clean -DskipTests dependency:resolve
 $ mvn clean -DskipTests verify
 $ mvn clean -DskipTests compile exec:java
 $ mvn clean -DskipTests package
-
 
 ## Maven version - 3.2.1-987-beta
 
@@ -52,13 +54,17 @@ $ mvn clean -DskipTests package
   * System similar to provided, but jar is added to system explicitly
   * Import - imports dependency of POM
 * Plugins operations
-  
+
+```s
 $ mvn dependency:tree
 $ mvn dependency:go-offline
 $ mvn dependency:purge-local-repository
 $ mvn dependency:sources-get
+$ mvn help:active-profiles
+```
 
 * Maven standard dir
+
 ```text
 +- src
   +- main
@@ -68,10 +74,12 @@ $ mvn dependency:sources-get
   | +- java
   |   +- resources
 ```
+
 ## Maven build LifeCycles
 
 * Maven is based over lifecycle and is pre-defined group of build steps called phases, each phase can be one or more plugins goals
 
+```s
 $ mvn validate
 $ mvn compile
 $ mvn test
@@ -79,7 +87,8 @@ $ mvn package
 $ mvn verify
 $ mvn install
 $ mvn deploy
+```
 
-# Maven Archetypes
+## Maven Archetypes
 
 * An original pattern or model from with all other things of the same kind are made
