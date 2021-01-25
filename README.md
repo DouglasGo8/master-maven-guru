@@ -6,7 +6,7 @@
 
 ## Command Line Java
 
-```s
+```bash
 $ javac {{FILE}}.java
 $ jar cf {{FILE}}.jar {{FILE}.class
 $ java -classpath *.jar {{ClassName}}
@@ -16,10 +16,8 @@ $ java -classpath ./lib/*:./ {{ClassName}}
 
 ## Maven Command Line
 
-$ mvn clean -DskipTests dependency:resolve
-$ mvn clean -DskipTests verify
-$ mvn clean -DskipTests compile exec:java
-$ mvn clean -DskipTests package
+$ mvn clean -DskipTests dependency:resolve $ mvn clean -DskipTests verify $ mvn clean -DskipTests compile exec:java $
+mvn clean -DskipTests package
 
 ## Maven version - 3.2.1-987-beta
 
@@ -47,15 +45,15 @@ $ mvn clean -DskipTests package
 * Can go many MANY layers Deep
 * Excluded dependencies can be remove specifics dependencies
 * Scopes
-  * Compile is default represents dependencies available on all Classpath, also propagated to downstream projects
-  * Provided like compile, but expected to be provided by JDK or container runtime
-  * Runtime not required for compile, but need for runtime. On runtime and tests Classpaths, not compile
-  * Test only available on test classpath, not transitive
-  * System similar to provided, but jar is added to system explicitly
-  * Import - imports dependency of POM
+    * Compile is default represents dependencies available on all Classpath, also propagated to downstream projects
+    * Provided like compile, but expected to be provided by JDK or container runtime
+    * Runtime not required for compile, but need for runtime. On runtime and tests Classpaths, not compile
+    * Test only available on test classpath, not transitive
+    * System similar to provided, but jar is added to system explicitly
+    * Import - imports dependency of POM
 * Plugins operations
 
-```s
+```bash
 $ mvn dependency:tree
 $ mvn dependency:go-offline
 $ mvn dependency:purge-local-repository
@@ -78,9 +76,10 @@ $ mvn clean deploy -Ppackagecloud
 
 ## Maven build LifeCycles
 
-* Maven is based over lifecycle and is pre-defined group of build steps called phases, each phase can be one or more plugins goals
+* Maven is based over lifecycle and is pre-defined group of build steps called phases, each phase can be one or more
+  plugins goals
 
-```s
+```bash
 $ mvn validate
 $ mvn compile
 $ mvn test
@@ -88,8 +87,20 @@ $ mvn package
 $ mvn verify
 $ mvn install
 $ mvn deploy
+#$ mvn dependency:tree
 ```
 
 ## Maven Archetypes
 
 * An original pattern or model from with all other things of the same kind are made
+
+
+## Maven Release Plugin
+* Must configure scm over settings.xml
+```bash
+$ mvn clean release:prepare
+$ mvn clean release:prepare -DdryRun=true
+$ mvn release:perform
+$ mvn release:rollback
+$ mvn release:clean
+```

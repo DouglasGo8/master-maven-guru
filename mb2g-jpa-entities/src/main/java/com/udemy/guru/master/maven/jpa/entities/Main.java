@@ -9,21 +9,21 @@ import javax.persistence.Persistence;
 @Slf4j
 public class Main {
 
-    public static void main(String... args) {
+  public static void main(String... args) {
 
-        log.info("Ok I'm here!!!");
+    log.info("Ok I'm here!!!");
 
-        var emf = Persistence.createEntityManagerFactory("postgreSQLPersistentFile");
-        var em = emf.createEntityManager();
+    var emf = Persistence.createEntityManagerFactory("postgreSQLPersistentFile");
+    var em = emf.createEntityManager();
 
-        var users = em.createQuery("SELECT u from User u", User.class).getResultList();
+    var users = em.createQuery("SELECT u from User u", User.class).getResultList();
 
-        users.forEach(user -> log.info("User Id-Name :: {}-{} {}",
-                user.getId(), user.getFirstName(), user.getLastName()));
+    users.forEach(user -> log.info("User Id-Name :: {}-{} {}",
+            user.getId(), user.getFirstName(), user.getLastName()));
 
-        em.close();
-        emf.close();
+    em.close();
+    emf.close();
 
 
-    }
+  }
 }

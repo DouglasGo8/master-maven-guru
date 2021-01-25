@@ -20,11 +20,11 @@ import java.io.Serializable;
 public class User implements Serializable {
 
 
-    @Id
-    private long id;
+  @Id
+  private long id;
 
-    private String email;
-    private String lastName;
-    private String firstName;
+  private String email;
+  private String lastName;
+  private String firstName;
 
 }

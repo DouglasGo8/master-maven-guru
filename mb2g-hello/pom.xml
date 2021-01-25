@@ -1,57 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-    <modelVersion>4.0.0</modelVersion>
+  <modelVersion>4.0.0</modelVersion>
 
-    <parent>
-        <artifactId>master-maven-guru</artifactId>
-        <groupId>com.udemy.guru.master.maven</groupId>
-        <version>1.0-SNAPSHOT</version>
-    </parent>
+  <parent>
+    <artifactId>master-maven-guru</artifactId>
+    <groupId>com.udemy.guru.master.maven</groupId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
 
-    <packaging>jar</packaging>
+  <packaging>jar</packaging>
 
-    <artifactId>mb2g-hello</artifactId>
-    <groupId>com.udemy.guru.master.maven.hello.world</groupId>
-    <version>1.0.0-SNAPSHOT</version>
+  <artifactId>mb2g-hello</artifactId>
+  <groupId>com.udemy.guru.master.maven.hello.world</groupId>
+  <version>1.0.0-SNAPSHOT</version>
 
-    <name>Udemy :: Apache Maven :: Beginner to Guru :: Hello World Command Line</name>
+  <name>Udemy :: Apache Maven :: Beginner to Guru :: Hello World Command Line</name>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>exec-maven-plugin</artifactId>
-                <version>3.0.0</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>java</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <mainClass>com.udemy.guru.master.maven.helloworld.Main</mainClass>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>3.2.0</version>
-                <configuration>
-                    <archive>
-                        <manifest>
-                            <addClasspath>true</addClasspath>
-                            <mainClass>com.udemy.guru.master.maven.helloworld.Main</mainClass>
-                        </manifest>
-                    </archive>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-site-plugin</artifactId>
-                <version>3.8.2</version>
-            </plugin>
-        </plugins>
-    </build>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>3.0.0</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>java</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <mainClass>com.udemy.guru.master.maven.helloworld.Main</mainClass>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>3.2.0</version>
+        <configuration>
+          <archive>
+            <manifest>
+              <addClasspath>true</addClasspath>
+              <mainClass>com.udemy.guru.master.maven.helloworld.Main</mainClass>
+            </manifest>
+          </archive>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-site-plugin</artifactId>
+        <version>3.8.2</version>
+      </plugin>
+    </plugins>
+  </build>
 
 </project>

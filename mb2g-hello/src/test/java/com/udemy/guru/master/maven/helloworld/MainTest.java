@@ -9,15 +9,15 @@ import java.util.stream.IntStream;
 public class MainTest {
 
 
-    @Test
-    public void doIt() {
+  @Test
+  public void doIt() {
 
-        var rnd = new Random();
-        var avg = IntStream.rangeClosed(1, 6)
-                .map(rnd::nextInt)
-                .average();
+    var rnd = new Random();
+    var avg = IntStream.rangeClosed(1, 6)
+            .map(rnd::nextInt)
+            .average();
 
-        Assertions.assertTrue(avg.isPresent());
+    Assertions.assertTrue(avg.isPresent());
 
-    }
+  }
 }
